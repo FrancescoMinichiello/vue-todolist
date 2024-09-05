@@ -23,11 +23,20 @@
             <h1>{{ title }}</h1>
         </header>
         <main>
-            <ul>
-                <li>
-
-                </li>
-            </ul>
+            <div class="container d-flex justify-content-center">
+                <div class="row flex-column">
+                    <div class="col-12">
+                        <ul>
+                            <li class="fs-3 fw-medium" v-for="(todoItem, index) in todoList">
+                                {{todoItem.todo}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-primary">Aggiungi alla lista</button>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer></footer>
     </div>
