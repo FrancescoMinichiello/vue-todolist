@@ -46,8 +46,13 @@ createApp({
             }
             console.log('questo è il content: ', content)
         },
+
         cleartodoInput() {
             this.newtodoContent = '';
+        },
+
+        deleteTask(index) {
+            this.todoList[index].done = !this.todoList[index].done
         }
     }
 }).mount('#app')
