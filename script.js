@@ -7,28 +7,28 @@ createApp({
             title: 'ToDo VUE',
             todoList: [
                 {
-                    todo: 'Iscriversi a Boolean',
-                    done: ''
+                    todoText: 'Iscriversi a Boolean',
+                    done: 'false'
                 },
                 {
-                    todo: 'Fare conoscenza con la classe 131',
-                    done: ''
+                    todoText: 'Fare conoscenza con la classe 131',
+                    done: 'false'
                 },
                 {
-                    todo: 'Studiare HTML',
-                    done: ''
+                    todoText: 'Studiare HTML',
+                    done: 'false'
                 },
                 {
-                    todo: 'Studiare JavaScript',
-                    done: ''
+                    todoText: 'Studiare JavaScript',
+                    done: 'false'
                 },
                 {
-                    todo: 'Studiare VueJS',
-                    done: ''
+                    todoText: 'Studiare VueJS',
+                    done: 'false'
                 },
                 {
-                    todo: 'Iniziare PHP',
-                    done: ''
+                    todoText: 'Iniziare PHP',
+                    done: 'false'
                 },
             ]
         }

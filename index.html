@@ -24,16 +24,23 @@
         </header>
         <main>
             <div class="container d-flex justify-content-center">
-                <div class="row flex-column">
-                    <div class="col-12">
+                <div class="row flex-column w-100">
+                    <div class="col">
                         <ul>
                             <li class="fs-3 fw-medium" v-for="(todoItem, index) in todoList">
-                                {{todoItem.todo}}
+                                {{todoItem.todoText}}
+                                <i class="bi bi-x-lg"></i>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-6">
-                        <button class="btn btn-primary">Aggiungi alla lista</button>
+                    <div class="col d-flex justify-content-between">
+                        <div class="form-floating w-50">
+                            <input type="text" class="form-control" id="floatingInputGroup1"
+                                placeholder="Aggiungi alla lista">
+                            <label for="floatingInputGroup1">Aggiungi alla lista</label>
+                        </div>
+                        <button class="btn btn-primary w-25">Aggiungi alla lista</button>
+                        <button class="btn btn-danger w-25">Elimina tutti</button>
                     </div>
                 </div>
             </div>
