@@ -9,27 +9,27 @@ createApp({
             todoList: [
                 {
                     todoText: 'Iscriversi a Boolean',
-                    done: 'false'
+                    done: false
                 },
                 {
                     todoText: 'Fare conoscenza con la classe 131',
-                    done: 'false'
+                    done: false
                 },
                 {
                     todoText: 'Studiare HTML',
-                    done: 'false'
+                    done: false
                 },
                 {
                     todoText: 'Studiare JavaScript',
-                    done: 'false'
+                    done: false
                 },
                 {
                     todoText: 'Studiare VueJS',
-                    done: 'false'
+                    done: false
                 },
                 {
                     todoText: 'Iniziare PHP',
-                    done: 'false'
+                    done: false
                 },
             ]
         }
@@ -37,14 +37,17 @@ createApp({
     methods: {
         addNewTask(content) {
             if (content.length >= 3) {
-                this.todoList.push(content);
+                const newTask = {
+                    todoText: content,
+                    done: false
+                }
+                this.todoList.push(newTask);
                 this.cleartodoInput();
             }
+            console.log('questo è il content: ', content)
         },
-
         cleartodoInput() {
             this.newtodoContent = '';
         }
     }
-
 }).mount('#app')
