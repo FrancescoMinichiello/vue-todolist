@@ -29,14 +29,14 @@
                         <ul>
                             <li class="fs-3 fw-medium" v-for="(todoItem, index) in todoList">
                                 {{todoItem.todoText}}
-                                <i class="bi bi-x-lg"></i>
+                                <i class="bi bi-x-lg" @click=""></i>
                             </li>
                         </ul>
                     </div>
                     <div class="col d-flex justify-content-between">
                         <div class="form-floating w-50">
-                            <input type="text" class="form-control" id="floatingInputGroup1"
-                                placeholder="Aggiungi alla lista">
+                            <input type="text" class="form-control" placeholder="Aggiungi alla lista"
+                                v-model="newtodoContent" @keyup.enter="addNewTask(newtodoContent)">
                             <label for="floatingInputGroup1">Aggiungi alla lista</label>
                         </div>
                         <button class="btn btn-primary w-25">Aggiungi alla lista</button>

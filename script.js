@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             title: 'ToDo VUE',
+            newtodoContent: '',
             todoList: [
                 {
                     todoText: 'Iscriversi a Boolean',
@@ -31,6 +32,18 @@ createApp({
                     done: 'false'
                 },
             ]
+        }
+    },
+    methods: {
+        addNewTask(content) {
+            if (content.length >= 3) {
+                this.todoList.push(content);
+                this.cleartodoInput();
+            }
+        },
+
+        cleartodoInput() {
+            this.newtodoContent = '';
         }
     }
 
